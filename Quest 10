@@ -8,7 +8,7 @@ public class Questao10 {
         int[] vetor = new int[30];
 
         for (int i = 0; i < vetor.length; i++) {
-            vetor[i] = random.nextInt(15) + 1; // Números entre 1 e 15
+            vetor[i] = random.nextInt(15) + 1;
         }
 
         System.out.print("Digite o número (chave): ");
