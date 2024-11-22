@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Questao11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] idades = new int[8];
+        int soma = 0, maiorIdade = Integer.MIN_VALUE;
+
+        for (int i = 0; i < idades.length; i++) {
+            System.out.print("Digite a idade " + (i + 1) + ": ");
+            idades[i] = sc.nextInt();
+            soma += idades[i];
+            if (idades[i] > maiorIdade) {
+                maiorIdade = idades[i];
+            }
+        }
+
+        double media = (double) soma / idades.length;
+        System.out.println("Média das idades: " + media);
+
+        System.out.println("Posições com mais de 25 anos:");
+        for (int i = 0; i < idades.length; i++) {
+            if (idades[i] > 25) {
+                System.out.println("Posição " + i + ": " + idades[i]);
+            }
+        }
+
+        System.out.println("Maior idade: " + maiorIdade);
+        System.out.println("Posições com a maior idade:");
+        for (int i = 0; i < idades.length; i++) {
+            if (idades[i] == maiorIdade) {
+                System.out.println("Posição " + i);
+            }
+        }
+    }
+}
