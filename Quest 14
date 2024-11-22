@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Questao14 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] nomes = new String[9];
+        int[] idades = new int[9];
+
+        for (int i = 0; i < nomes.length; i++) {
+            System.out.print("Digite o nome da pessoa " + (i + 1) + ": ");
+            nomes[i] = sc.nextLine();
+            System.out.print("Digite a idade de " + nomes[i] + ": ");
+            idades[i] = sc.nextInt();
+            sc.nextLine(); // Limpa o buffer
+        }
+
+        System.out.println("Pessoas menores de idade:");
+        for (int i = 0; i < idades.length; i++) {
+            if (idades[i] < 18) {
+                System.out.println("Nome: " + nomes[i] + ", Idade: " + idades[i]);
+            }
+        }
+    }
+}
