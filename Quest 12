@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Questao12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] notas = new double[10];
+        double soma = 0, maiorNota = Double.MIN_VALUE;
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("Digite a nota do aluno " + (i + 1) + ": ");
+            notas[i] = sc.nextDouble();
+            soma += notas[i];
+            if (notas[i] > maiorNota) {
+                maiorNota = notas[i];
+            }
+        }
+
+        double media = soma / notas.length;
+        System.out.println("Média da turma: " + media);
+
+        System.out.println("Alunos acima da média:");
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                System.out.println("Aluno " + (i + 1) + " com nota " + notas[i]);
+            }
+        }
+
+        System.out.println("Maior nota: " + maiorNota);
+        System.out.println("Posições da maior nota:");
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] == maiorNota) {
+                System.out.println("Posição " + i);
+            }
+        }
+    }
+}
