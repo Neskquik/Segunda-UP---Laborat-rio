@@ -11,7 +11,7 @@ public class Questao14 {
             nomes[i] = sc.nextLine();
             System.out.print("Digite a idade de " + nomes[i] + ": ");
             idades[i] = sc.nextInt();
-            sc.nextLine(); // Limpa o buffer
+            sc.nextLine();
         }
 
         System.out.println("Pessoas menores de idade:");
